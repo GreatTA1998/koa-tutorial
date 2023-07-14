@@ -1,0 +1,4 @@
+const PLAID_CLIENT_ID = '60a82f4b2dd19f0010a1abd3'
+const PLAID_SECRET = 'b86a3e600550c25c233aee0c30dce9'
+
+module.exports = { PLAID_CLIENT_ID, PLAID_SECRET }
