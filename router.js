@@ -12,10 +12,12 @@ router.get("/link/token/create", async (ctx) => {
   ctx.status = 200
 })
 
-router.get("/link/token/update", async (ctx) => {
+// FOR UPDATE MODE, NOTICE WE PASS A ACCESS_TOKEN
+router.post("/link/token/create", async (ctx) => {
   const { access_token } = ctx.request.body
+  console.log("received access_token server side =", access_token)
 
-  const createTokenResponse = await client.linkTokenCreate({ 
+  const createTokenResponse = await client.linkTokenCreate({
     access_token,
     ...baseLinkTokenConfig
   })
